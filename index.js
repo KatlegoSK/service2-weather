@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser')
 
-const port = 4400;
+
+var port = process.env.PORT || 4400;
 
 //A module for allowing endpoints to be exposed on public
 const cors = require('cors');
