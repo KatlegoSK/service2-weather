@@ -29,8 +29,6 @@ app.post('/service2',  (req, res) => {
 	 //A request to search for a place
 	 axios.get("http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey="+apiKey+"&q="+queryLocation+"&language=en-us")
       .then(response => {
-
-			console.log(response.data[0]);
 			
 			let locationDetails = response.data[0];
 			
@@ -53,11 +51,11 @@ app.post('/service2',  (req, res) => {
 				 
 				   if(error.data)
 					{
-						console.log("Errrrr");
+						
 						res.send(error.data.Message);
 						
 					}else{
-						console.log("Errrrr Occured Fetching conditions");
+						
 						res.send("An unexpected error occured. Please try again later.");
 					}
 				 
@@ -68,12 +66,11 @@ app.post('/service2',  (req, res) => {
 		  
 		if(error.data)
 		{
-			console.log("Errrrr");
+			
 			res.send(error.data.Message);
 			
 		}else{
-			console.log("Errrrr Occured searching for a place");
-			console.log(error);
+			
 			res.send("An unexpected error occured. Please try again later.");
 		}
         
