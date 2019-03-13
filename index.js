@@ -9,7 +9,7 @@ var port = process.env.PORT || 4400;
 const cors = require('cors');
 
 //AccuWeather API key
-const apiKey = "VxVBFifNpcXI1LNhPpDEuR2c4x6Twuti";
+const apiKey = "sAmjfYQeb9Pa9zWlChBXsiJ30AMNELn8";
 
 //Axios module for initiating GET and POST requests
 const axios = require('axios');
